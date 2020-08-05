@@ -13,8 +13,8 @@ LoginPage login = new LoginPage();
     @Test
     public void Test() throws InterruptedException {
         base.VerifyAndClick(Login.LOGIN_PAGE);
+        login.enterCredentials(Login.USERNAME_FIELD,Login.PASSWORD_FIELD);
 
-        login.enterCredentials(Login.USERNAME_FIELD,"John Doe");
 
     }
 

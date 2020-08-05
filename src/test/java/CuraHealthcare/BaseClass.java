@@ -36,8 +36,6 @@ public class BaseClass{
         WebElement perform = driver.findElement(By.id(identifier));
        // wait.until(ExpectedConditions.visibilityOfElementLocated(By.id(identifier)));
         perform.click();
-
-
     }
 
 
