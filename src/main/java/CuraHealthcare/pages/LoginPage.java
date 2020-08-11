@@ -9,7 +9,7 @@ public class LoginPage {
 
 
 
-    public void enterCredentials(String username, String password) {
+    public void enterLoginCredentials(String username, String password) {
         /** Find the elements where the username & password values are stored, and store them in Strings */
         String user = chrome.findElement(By.xpath("//input[@aria-describedby='demo_username_label']")).getAttribute("value");
         String pass = chrome.findElement(By.xpath("//input[@aria-describedby='demo_password_label']")).getAttribute("value");

@@ -3,6 +3,8 @@ package CuraHealthcare.pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.List;
 
@@ -18,6 +20,10 @@ public class AppointmentPage {
     public String comment = "This field is automatically populated";
 
     private WebDriver driver = getChromeDriver();
+    private WebDriverWait wait = new WebDriverWait(driver, 15);
+
+
+
 
 
 
@@ -25,7 +31,15 @@ public class AppointmentPage {
         driver.findElement(By.id(identifier)).sendKeys(value);
     }
 
+    public void SelectDropdownValue (String identifier,String value){
+        WebElement dropDownElement = driver.findElement(By.id(identifier));
+        Select dropDown = new Select(dropDownElement);
+        dropDown.selectByValue(value);
+
+    }
+
     public void SelectRadioButton(String identifier, String value) {
+
 
         List<WebElement> radioBtn = driver.findElements(By.name(identifier));
         for (int i = 0; i < radioBtn.size(); i++) {

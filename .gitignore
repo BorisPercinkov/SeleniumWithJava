@@ -15,7 +15,8 @@
 
 
 target/
-.idea
+
+.idea/
 *.jar
 *.war
 *.nar

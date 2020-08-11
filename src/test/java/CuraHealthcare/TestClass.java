@@ -16,19 +16,23 @@ public class TestClass extends CommonClass {
     public void LoginTest() {
         comFun.StartUp();
         comFun.VerifyAndClick(PageSelectors.MAKE_APPOINTMENT);
-        logFun.enterCredentials(PageSelectors.USERNAME_FIELD, PageSelectors.PASSWORD_FIELD);
+        logFun.enterLoginCredentials(PageSelectors.USERNAME_FIELD, PageSelectors.PASSWORD_FIELD);
         comFun.VerifyAndClick(PageSelectors.LOGIN_BUTTON);
     }
 
     @Test
     /** Test that executes on the Appointment Page*/
     public void AppointmentTest() {
-        appFun.SelectOrEnterValue(PageSelectors.FACILITY_DROPDOWN, appFun.appointmentValue);
+        appFun.SelectDropdownValue(PageSelectors.FACILITY_DROPDOWN, appFun.appointmentValue);
         comFun.VerifyAndClick(PageSelectors.FACILITY_CHECKBOX);
         appFun.SelectRadioButton(PageSelectors.FACILITY_RADIOBTN, appFun.radioBtnValue);
         appFun.SelectOrEnterValue(PageSelectors.FACILITY_DATE, appFun.dateValue);
         appFun.SelectOrEnterValue(PageSelectors.FACILITY_COMMENT, appFun.comment);
         comFun.VerifyAndClick(PageSelectors.FACILITY_BUTTON);
         comFun.Finish();
+
     }
+
+
+
 }

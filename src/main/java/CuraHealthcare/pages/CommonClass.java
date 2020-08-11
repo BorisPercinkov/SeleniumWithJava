@@ -15,7 +15,7 @@ public class CommonClass {
     /** Having some issues setting up @Before and @After annotations so I'm just calling this methods on the begining and at the end */
     public void StartUp() {
         driver.get(URL);
-        driver.manage().window().fullscreen();
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
